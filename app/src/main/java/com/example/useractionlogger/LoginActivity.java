@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
                 if (dbHelper.checkUser(username, password)) {
-                    Intent intent = new Intent(LoginActivity.this, LogActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, LogViewerActivity.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(LoginActivity.this, "Неверные данные", Toast.LENGTH_SHORT).show();
